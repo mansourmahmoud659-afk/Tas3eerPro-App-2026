@@ -7,8 +7,8 @@ import {
  ProfitCalculator,
  ShippingCalculator,
  VatCalculator,
-} from "@/components/pricing/calculators";
-import { HistoryPanel } from "@/components/pricing/history-panel";
+} from "../components/pricing/calculators";
+import { HistoryPanel } from "../components/pricing/history-panel";
 import {
  IconArrow,
  IconHistory,
@@ -19,10 +19,10 @@ import {
  IconTrend,
  IconTruck,
  IconWifiOff,
-} from "@/components/pricing/icons";
-import { useToast } from "@/components/pricing/ui";
-import { loadHistory, type HistoryEntry } from "@/lib/history";
-import { verifyLicense } from "@/lib/license";
+} from "../components/pricing/icons";
+import { useToast } from "../components/pricing/ui";
+import { loadHistory, type HistoryEntry } from "../lib/history";
+import { verifyLicense } from "../lib/license";
 
 // ============================================================
 // نظام التجربة والتفعيل — يعمل محلياً بعد التفعيل
