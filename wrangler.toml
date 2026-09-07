@@ -1,0 +1,6 @@
+name = "mahref-tas3eer-ff011d20"
+compatibility_date = "2024-09-02"
+pages_build_output_dir = "./dist"
+
+[site]
+bucket = "./dist"

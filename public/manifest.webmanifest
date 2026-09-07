@@ -1,0 +1,27 @@
+{
+  "name": "محترف التسعير — Smart Pricing Pro",
+  "short_name": "محترف التسعير",
+  "description": "حاسبات تسعير وأرباح وضريبة وشحن ونقطة تعادل بالجنيه المصري، تعمل بالكامل بدون إنترنت.",
+  "lang": "ar",
+  "dir": "rtl",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#0b1120",
+  "theme_color": "#0b1120",
+  "icons": [
+    {
+      "src": "/icons/app-icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/app-icon-maskable.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "maskable"
+    }
+  ]
+}
