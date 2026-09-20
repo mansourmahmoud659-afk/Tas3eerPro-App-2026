@@ -1,7 +1,26 @@
 const SUPABASE_URL = import.meta.env.VITE_SUPABASE_URL as string | undefined;
 const SUPABASE_ANON_KEY = import.meta.env.VITE_SUPABASE_ANON_KEY as string | undefined;
 
+// قائمة الأكواد المباشرة للتفعيل السريع
+const HARDCODED_LICENSES = [
+  "TAS3EER-PRO-8K92-X101",
+  "TAS3EER-PRO-4M73-Y202",
+  "TAS3EER-PRO-9P15-Z303",
+  "TAS3EER-PRO-2L84-W404",
+  "TAS3EER-PRO-7R36-V505"
+];
+
 export async function verifyLicense(licenseKey: string, deviceId: string) {
+  const formattedKey = licenseKey.trim().toUpperCase();
+
+  // التحقق أولاً من الأكواد المباشرة
+  if (HARDCODED_LICENSES.includes(formattedKey)) {
+    return {
+      ok: true,
+      message: "تم التفعيل بنجاح!",
+    };
+  }
+
   if (!SUPABASE_URL || !SUPABASE_ANON_KEY) {
     return { ok: false, message: "نظام التفعيل غير مُعدّ بعد. تواصل مع صاحب الأداة." };
   }
@@ -17,7 +36,7 @@ export async function verifyLicense(licenseKey: string, deviceId: string) {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          p_license_key: licenseKey.trim().toUpperCase(),
+          p_license_key: formattedKey,
           p_device_id: deviceId,
         }),
       },
